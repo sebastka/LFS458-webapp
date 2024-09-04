@@ -38,7 +38,7 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/sebastka/LFS458-webapp:latest
+            ghcr.io/sebastka/lfs458-webapp:latest
       -
         name: Retrieve tag name
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
@@ -54,4 +54,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/sebastka/LFS458-webapp:${{ env.TAG_NAME }}
+            ghcr.io/sebastka/lfs458-webapp:${{ env.TAG_NAME }}
