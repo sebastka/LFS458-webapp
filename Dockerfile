@@ -7,4 +7,5 @@ RUN apk add --no-cache tzdata
 COPY ./src/ /usr/share/nginx/html
 
 USER nginx
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
