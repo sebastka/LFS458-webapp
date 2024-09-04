@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: webapp
+  namespace: webapp
+spec:
+  containers:
+    - name: webapp
+      image: ghcr.io/sebastka/lfs458-webapp:latest
+      ports:
+        - containerPort: 8080
+      #env:
+      #  - name: DB_HOST
+      #    value: "db"
+      resources:
+        limits:
+          cpu: "0.5"
+          memory: "512Mi"
+        requests:
+          cpu: "0.25"
+          memory: "256Mi"
